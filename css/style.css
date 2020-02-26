@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -19,7 +19,7 @@ body {
   color: rgba(0, 0, 0, 0.7); }
   @media screen and (max-width: 992px) {
     body {
-      font-size: 16px; } 
+      font-size: 16px; }
       h2{
           text-align: center;
       }}
@@ -250,9 +250,9 @@ figure {
 #rcorners2 {
     border-radius: 15px;
   background: black;
-  padding: 20px; 
+  padding: 20px;
   width: 50%;
-  height: 40px; 
+  height: 40px;
 }
         #colorlib-aside .colorlib-footer ul li a {
           color: rgba(255, 255, 255, 0.3);
@@ -455,7 +455,7 @@ body.offcanvas {
     padding-bottom: 3em;
     padding-top: 2em;
     padding-right: 2em;
-    
+
 }
 #colorlib-footer2 .h2{
     color: red;
@@ -667,8 +667,8 @@ margin-left: 10px;}
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: #2c98f0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -682,14 +682,16 @@ margin-left: 10px;}
   float: left; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
     color: #fff; }
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-2 {
-    background: #ec5453; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.didi {
+    background: white;
+    background-image: url("../images/didi.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.stone {
+    background: white;
+    background-image: url("../images/stone.svg"); }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
     background: #f9bf3f; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
     background: #a84cb8; }
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
-    background: #2fa499; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
@@ -700,7 +702,7 @@ margin-left: 10px;}
   position: relative;
   background: #f2f3f7;
   padding: 1.5em;
-  margin-left: 60px;
+  margin-left: 80px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
@@ -1584,4 +1586,3 @@ align-items: stretch;}
 
 /* Buy me a coffe button css*/
 .bmc-button img{width: 27px !important;margin-bottom: 0px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#000 !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}
-
