@@ -688,10 +688,18 @@ margin-left: 10px;}
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.stone {
     background: white;
     background-image: url("../images/stone.svg"); }
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
-    background: #f9bf3f; }
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
-    background: #a84cb8; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.kearney {
+    background: white;
+    background-image: url("../images/kearney.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.morgan {
+    background: blue;
+    background-image: url("../images/morgan.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.total {
+    background: white;
+    background-image: url("../images/total.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.carrefour {
+    background: white;
+    background-image: url("../images/carrefour.svg"); }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
