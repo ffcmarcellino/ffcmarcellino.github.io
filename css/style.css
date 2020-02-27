@@ -682,6 +682,15 @@ margin-left: 10px;}
   float: left; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
     color: #fff; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.ucb {
+    background: white;
+    background-image: url("../images/ucb.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.poli {
+    background: white;
+    background-image: url("../images/poli.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.ecn {
+    background: white;
+    background-image: url("../images/ecn.svg"); }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.didi {
     background: white;
     background-image: url("../images/didi.svg"); }
