@@ -680,8 +680,6 @@ margin-left: 10px;}
   box-shadow: 0 0 0 5px #f2f3f7;
   line-height: 40px;
   float: left; }
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
-    color: #fff; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.ucb {
     background: white;
     background-image: url("../images/ucb.svg"); }
