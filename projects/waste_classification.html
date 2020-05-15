@@ -5,8 +5,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>Fellipe Marcellino - Waste Image Classification</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Classifying images of waste into the correct category" />
-      <meta name="keywords" content="portfolio,personal website,github,projects,supervised learning,machine learning,neural network,cnn,transfer learning,convolutional,image recognition,classifier" />
+      <meta name="description" content="Solving MountainCar challenge with reinforcement learning" />
+      <meta name="keywords" content="portfolio,personal website,github,projects,reinforcement learning,machine learning,gym,openai,mountain car" />
       <meta name="author" content="Fellipe Marcellino" />
       <!--Social Media icons-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,6 +27,111 @@
       <link rel="stylesheet" href="../css/style.css">
       <!-- Modernizr JS -->
       <script src="js/modernizr-2.6.2.min.js"></script>
+      <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family:Wingdings;
+      	panose-1:5 0 0 0 0 0 0 0 0 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 4 5 3 5 4 6 3 2 4;}
+      @font-face
+      	{font-family:Georgia;
+      	panose-1:2 4 5 2 5 4 5 2 3 3;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{margin:0cm;
+      	margin-bottom:.0001pt;
+      	line-height:115%;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;}
+      p.MsoCaption, li.MsoCaption, div.MsoCaption
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:10.0pt;
+      	margin-left:0cm;
+      	font-size:9.0pt;
+      	font-family:"Arial",sans-serif;
+      	color:#1F497D;
+      	font-style:italic;}
+      p.MsoTitle, li.MsoTitle, div.MsoTitle
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:3.0pt;
+      	margin-left:0cm;
+      	line-height:115%;
+      	page-break-after:avoid;
+      	font-size:26.0pt;
+      	font-family:"Arial",sans-serif;}
+      p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:16.0pt;
+      	margin-left:0cm;
+      	line-height:115%;
+      	page-break-after:avoid;
+      	font-size:15.0pt;
+      	font-family:"Arial",sans-serif;
+      	color:#666666;}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:purple;
+      	text-decoration:underline;}
+      p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:0cm;
+      	margin-left:36.0pt;
+      	margin-bottom:.0001pt;
+      	line-height:115%;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;}
+      p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:0cm;
+      	margin-left:36.0pt;
+      	margin-bottom:.0001pt;
+      	line-height:115%;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;}
+      p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:0cm;
+      	margin-left:36.0pt;
+      	margin-bottom:.0001pt;
+      	line-height:115%;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;}
+      p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+      	{margin-top:0cm;
+      	margin-right:0cm;
+      	margin-bottom:0cm;
+      	margin-left:36.0pt;
+      	margin-bottom:.0001pt;
+      	line-height:115%;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;}
+      .MsoChpDefault
+      	{font-family:"Arial",sans-serif;}
+      .MsoPapDefault
+      	{line-height:115%;}
+      @page WordSection1
+      	{size:612.0pt 792.0pt;
+      	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+      div.WordSection1
+      	{page:WordSection1;}
+       /* List Definitions */
+       ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+      </style>
    </head>
    <body>
       <div id="colorlib-page">
@@ -60,8 +165,721 @@
                               <div class="col-md-12">
                                  <div class="about-desc">
                                     <hr>
-                                    <h3>Coming soon ...</h3>
-                                    <!--<img src="images/trafficlight.jpg" style="border:3px solid black;width:449px;height:298px"></img>-->
+                                    <div class=WordSection1>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><b><span lang=EN style='font-size:16.0pt;line-height:150%;font-family:
+                                      "Georgia",serif'>The US recycling industry is struggling and needs to be
+                                      changed</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>The last century has seen a
+                                      significant rise in population and consumption levels, which has led to an
+                                      increase in waste production. Fortunately, global awareness of environmental
+                                      impact has been increasing in the last decade. However, this increased
+                                      consciousness hasn't yet translated into positive impact in the US. A clear
+                                      example of this is the fact that effective recycling rates have remained
+                                      stagnant. According to the Environmental Protection Agency (<span
+                                      class=MsoHyperlink><a
+                                      href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">EPA</a></span>),
+                                      the difference in 2014 and 2015 effective recycling rates was less than one
+                                      percent. Also, just 35% of the total waste production in the US was recycled or
+                                      composted in 2015. The remaining waste often ends up in landfills and dumps,
+                                      increasing the emission of toxic gases to the atmosphere.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>The slowdown in recycling can be
+                                      explained by the fact that recycling is an effortful and time-consuming task.
+                                      Most people do not take the time to properly segment their trash into specific
+                                      recycling bins. On top of that, even if people want to recycle, finding the
+                                      appropriate bin can be confusing and lead to contaminated bins and ineffective
+                                      recycling.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Moreover, in the past years, US
+                                      recycling centers used to sort the recyclable trash, compact it and sell to
+                                      China, where the real recycling happened. However, in 2018, China reduced its
+                                      tolerance to contamination to 0.5%, which is currently infeasible in the US.
+                                      This only worsened the problem, as recycling facilities are shutting down all
+                                      over the country.</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Thus,
+                                      the question comes naturally: <b>can we improve our current recycling rates and
+                                      reduce contamination using machine learning? </b></span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><span lang=EN>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><b><span lang=EN style='font-size:16.0pt;line-height:150%;font-family:
+                                      "Georgia",serif'>The solution must come from the beginning of the recycling
+                                      chain</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Applying machine learning to classify
+                                      trash is not new and has already been implemented in some recycling facilities
+                                      around the world. However, it only increases the efficiency of the current
+                                      operation at those recycling centers. In other words, when the trash gets to
+                                      those recycling facilities, it is already contaminated by improper recycling
+                                      done before. </span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Then, the improvement is limited by
+                                      the contamination rate upon arrival, which is not controlled by the operation
+                                      inside facilities. That's why the solution to this problem must come from the
+                                      beginning of the recycling chain: either in the choice of materials in the
+                                      consumer goods industry or in the sorting process of individuals.</span></p>
+
+                                      <p class=MsoNormal align=center style='margin-bottom:12.0pt;text-align:center;
+                                      text-indent:36.0pt;line-height:150%;page-break-after:avoid'><img border=0
+                                      width=459 height=255 id="Picture 1" src="waste_classification_files/image001.jpg"></p>
+
+                                      <p class=MsoCaption align=center style='text-align:center'><span lang=EN
+                                      style='color:windowtext'>Figure </span><span
+                                      lang=EN style='color:windowtext'>1</span><span lang=EN style='color:windowtext'>
+                                      - Simplified Recycling Chain</span></p>
+
+                                      <p class=MsoNormal><span lang=EN>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+                                      focus of this work will be in the latter option, as seen in Figure 1 above. Hence,
+                                      we can reformulate our initial question: <b>can we improve our current
+                                      recycling rates and reduce contamination <u>before the trash is collected</u>
+                                      by using machine learning <u>in smart bins</u>? </b></span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><b><span lang=EN style='font-size:16.0pt;line-height:150%;font-family:
+                                      "Georgia",serif'>Machine Learning algorithms can be helpful for waste sorting</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>
+                                      In order to validate the hypothesis that machine learning can be used to classify
+                                      waste into the correct category, I'll compare the performance of different machine
+                                      learning algorithms on this task using a dataset of waste images.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><b><span lang=EN style='font-size:14.0pt;line-height:
+                                      150%;font-family:"Georgia",serif'>Getting the data</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>For this project, I'm using a dataset
+                                      of 2,527 images from an existing Github repository found <a
+                                      href="https://github.com/garythung/trashnet" target="_blank">here</a>.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>The images are divided into 6
+                                      categories of waste: plastic (482), metal (410), glass (501), cardboard (403),
+                                      trash (137), and paper (594). Apart from trash, this dataset is reasonably
+                                      balanced. A sample of this dataset can be seen in Figure 2 below.</span></p>
+
+                                      <p class=MsoNormal align=center style='margin-bottom:12.0pt;text-align:center;
+                                      text-indent:36.0pt;line-height:150%;page-break-after:avoid'><b><u><span
+                                      style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+                                      border=0 width=471 height=427 id=image7.png src="waste_classification_files/image002.gif"></span></u></b></p>
+
+                                      <p class=MsoCaption align=center style='text-align:center'><span lang=EN
+                                      style='color:windowtext'>Figure </span><span
+                                      lang=EN style='color:windowtext'>2</span><span lang=EN style='color:windowtext'>
+                                      - Sample of images from dataset</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>In computer vision, a common
+                                      technique to use in order to expand the number of training examples and thus
+                                      reduce variance is Data Augmentation. Here I performed Data Augmentation with
+                                      transformations such as width and height shift range, flipping and zooming. In
+                                      order to increase computational speed, I also resized the images from 512x384
+                                      to 200x200 pixels.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><b><span lang=EN style='font-size:14.0pt;line-height:
+                                      150%;font-family:"Georgia",serif'>Training the models</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>With the dataset ready to be used,
+                                      I'll now train a couple of models: CART, Random Forest, Gradient Boosting, XGBoost,
+                                      Neural Network (NN), Convolutional Neural Network (CNN) and CNN with transfer
+                                      learning.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Before training the models, I'll
+                                      split the data into 50% training, 25% validation and 25% test.</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>CART</span></u></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+                                      first model I explored was a simple classification tree. With default
+                                      parameters including the Gini impurity function, no minimum impurity decrease
+                                      and a lower limit for the number of observations in each bucket of 2, the model
+                                      yielded an accuracy of 45.11%. </span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Then,
+                                      I performed 3-fold cross-validation on the hyper parameters and obtained an
+                                      accuracy of <b>46.24%</b> with no minimum impurity decrease and a lower limit
+                                      for the number of observations of 6. </span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>Random Forest</span></u></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+                                      second model implemented was a Random Forest, which with default parameters of
+                                      10 CART trees built, sqrt(features) variables examined at each split, and one
+                                      minimum number of observations in each terminal node obtained an accuracy of 60.87%.
+                                      </span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>I
+                                      then performed a 3-fold cross-validation procedure to obtain technical
+                                      parameters of 1,100 CART trees built, 200 features examined at each split and 5
+                                      minimum number of observations in each terminal node, obtaining an increased
+                                      accuracy of <b>68.90%. </b></span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;line-height:150%'><span lang=EN
+                                      style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>Boosting</span></u></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+                                      next models analyzed were two types of ensemble boosting models that rely on
+                                      slow learning rather than building parallel complete tree models. The gradient
+                                      boosting model achieved an accuracy of <b>66.79%</b> while the extreme gradient
+                                      boosting obtained an accuracy of <b>66.27%.</b></span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Although
+                                      XGBoost utilizes second order gradients and regularization to improve
+                                      computation time, the multiple hour runtimes of the default models made me not
+                                      use cross-validation.</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>Neural Network</span></u></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>I
+                                      started by building a simple Neural Network using Keras. By tuning the number
+                                      of epochs and dense layers I was not able to obtain an accuracy better than <b>47.43%.</b>
+                                      This was accomplished using a batch size of 32, 250 epochs and 4 dense layers
+                                      with Relu and Softmax as activation functions.</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'><span style='text-decoration:none'>&nbsp;</span></span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>CNN</span></u></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>I
+                                      moved then to a CNN model that historically has better performances in
+                                      classifying images. By changing the number of epochs and exploring different
+                                      structures of the network, I obtained the best performances after 80 epochs,
+                                      for a CNN with a batch size of 32, 3 2D convolution layers, 3 pooling layers,
+                                      and 3 dense layers. I used Relu as the activation function for each layer,
+                                      apart from the last one where I used the Softmax function. The obtained
+                                      accuracy was <b>71.54%</b>, which is higher than the ones obtained with any
+                                      other previous model.</span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'><span style='text-decoration:none'>&nbsp;</span></span></p>
+
+                                      <p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><u><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:
+                                      "Times New Roman",serif'>CNN with Transfer Learning</span></u></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Lastly, I implemented a CNN with
+                                      Transfer Learning using Keras. For this model, I used Resnet34, a famous deep
+                                      residual network pre-trained on ImageNet, a dataset with 14 million images and
+                                      22 thousand different classes. </span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>This pre-trained model can be very
+                                      good with low level features related to images, but not necessarily with
+                                      specific images of waste. Therefore, I added a final layer and trained it to
+                                      make the model perform well on waste classification. With a batch size of 16,
+                                      20 epochs and a tuned learning rate, I obtained an accuracy of <b>91.29%</b>,
+                                      which makes this final model outperform any previous one. </span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><b><span lang=EN style='font-size:14.0pt;line-height:
+                                      150%;font-family:"Georgia",serif'>Results</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>For
+                                      the peculiarity of this problem I decided to use accuracy as the performance
+                                      metric. In fact, we are equally interested in maximizing correct predictions
+                                      and minimizing wrong predictions for each different type of waste, so accuracy
+                                      is the most suited metric to accomplish that. Below we can see a comparison of
+                                      the different models on accuracy:</span></p>
+
+                                      <table class=a border=1 cellspacing=0 cellpadding=0 width=0 style='border-collapse:
+                                       collapse;border:none'>
+                                       <tr>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><b><span lang=EN style='font-family:"Times New Roman",serif'>Model</span></b></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-left:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><b><span lang=EN style='font-family:"Times New Roman",serif'>Accuracy</span></b></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-left:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><b><span lang=EN style='font-family:"Times New Roman",serif'>95%
+                                        Confidence Interval</span></b></p>
+                                        </td>
+                                       </tr>
+                                       <tr>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>CART</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>46.24%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(42.7%,50%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>Neural
+                                        Network</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>47.43%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(43.4%,51.1%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>XGBoost</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>66.27%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(63.0%,69.8%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr style='height:11.75pt'>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt;height:11.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>Gradient
+                                        Boosting</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:11.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>66.79%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:11.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(62.6%,70.4%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr style='height:7.45pt'>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt;height:7.45pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal'><span
+                                        lang=EN style='font-family:"Times New Roman",serif'>Random Forest</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:7.45pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>68.90%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:7.45pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(65.3%,72.6%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr style='height:4.95pt'>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt;height:4.95pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal'><span
+                                        lang=EN style='font-family:"Times New Roman",serif'>CNN</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:4.95pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-size:12.0pt;font-family:"Times New Roman",serif'>71.54</span><span
+                                        lang=EN style='font-family:"Times New Roman",serif'>%</span></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:4.95pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><span lang=EN style='font-family:"Times New Roman",serif'>(68.0%,74.9%)</span></p>
+                                        </td>
+                                       </tr>
+                                       <tr style='height:1.75pt'>
+                                        <td width=208 valign=top style='width:156.0pt;border:solid black 1.0pt;
+                                        border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt;height:1.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal'><b><span
+                                        lang=EN style='font-family:"Times New Roman",serif;color:#4BACC6'>CNN with
+                                        transfer learning</span></b></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:1.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><b><span lang=EN style='font-family:"Times New Roman",serif;
+                                        color:#4BACC6'>91.29%</span></b></p>
+                                        </td>
+                                        <td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+                                        none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+                                        padding:5.0pt 5.0pt 5.0pt 5.0pt;height:1.75pt'>
+                                        <p class=MsoNormal align=center style='text-align:center;line-height:normal;
+                                        border:none'><b><span lang=EN style='font-family:"Times New Roman",serif;
+                                        color:#4BACC6'>(89.3%,93.4%)</span></b></p>
+                                        </td>
+                                       </tr>
+                                      </table>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>It turns out that <b>CNN with
+                                      transfer learning</b> had a huge advantage. This is reasonable, as we are using
+                                      a network that was pre-trained with millions of images, which makes it detect
+                                      good low level features without the need of a large dataset. The other models,
+                                      however, will inevitably suffer from high variance due to the limited number of
+                                      training examples.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-indent:36.0pt;line-height:
+                                      150%'><span lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+                                      Figure 3 below we can see the confusion matrix for this model:</span></p>
+
+                                      <p class=MsoNormal align=center style='margin-bottom:12.0pt;text-align:center;
+                                      text-indent:36.0pt;line-height:150%'><span style='font-family:"Times New Roman",serif'><img
+                                      border=0 width=414 height=347 id=image3.png src="waste_classification_files/image003.gif"></span></p>
+
+                                      <p class=MsoCaption align=center style='text-align:center'><span lang=EN
+                                      style='color:windowtext'>Figure </span><span
+                                      lang=EN style='color:windowtext'>3</span><span lang=EN style='color:windowtext'>
+                                      - Confusion Matrix for CNN with Transfer Learning</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>The
+                                      y-axis corresponds to the true values, while the x-axis to the predicted
+                                      values. By analyzing the confusion matrix, we can see that the model performs
+                                      better with paper items, while it needs improvement in predicting the trash
+                                      category. It makes sense, as the trash category is too broad and encompasses
+                                      everything that is not contained in the other categories.</span></p>
+
+                                      <p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;
+                                      font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>In order to understand where
+                                      the model failed, I got a sample of images with the highest loss of prediction,
+                                      seen in Figure 4 below:</span></p>
+
+                                      <p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;
+                                      font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><img
+                                      border=0 width=447 height=368 id=image5.png src="waste_classification_files/image004.gif"></p>
+
+                                      <p class=MsoCaption align=center style='text-align:center'><span lang=EN
+                                      style='color:windowtext'>Figure </span><span
+                                      lang=EN style='color:windowtext'>4</span><span lang=EN style='color:windowtext'>
+                                      - Error Analysis Sample</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>We can clearly spot some corner cases
+                                      here. For example, items shining with light were predicted as metal (bottom
+                                      right corner), because the model probably interprets luminosity in pixels as a
+                                      strong predictor for metal. Another example is the second image of the first
+                                      row. The fact that it was a white object made the algorithm predict it as
+                                      paper, while it was plastic.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Although there is room for
+                                      improvement in those corner cases, an accuracy of 91.3% in the test set seems
+                                      really promising, given that recycling rates in the US are around 35%.
+                                      Therefore, it <b>validates the efficacy of computer vision algorithms for waste
+                                      classification.</b></span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>A demo of this algorithm can be
+                                      tested in this web application I developed: <span class=MsoHyperlink><a
+                                      href="https://robin-project.herokuapp.com" target="_blank">robin-project.herokuapp.com</a></span></span></p>
+
+                                      <p class=MsoNormal><b><span lang=EN style='font-size:16.0pt;line-height:115%;
+                                      font-family:"Georgia",serif'>Smart bins are the final piece of the puzzle</span></b></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Now
+                                      that we've seen the power of computer vision to classify trash into the correct
+                                      category, we need a way to apply this in the beginning of the waste chain. In
+                                      order to do that, a hardware product needs to be made with a camera to collect
+                                      images.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+                                      first question that arises is: how do we sort the trash after the algorithm
+                                      classifies the object?</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>One
+                                      way to do it would be to implement a robotic system that automatically disposes
+                                      the trash in the correct bin. From the point of view of the end user, this
+                                      would be the best experience. One just throws the trash in the smart bin and
+                                      don't have to think about it anymore. However, this will put all the risk of
+                                      error in the algorithm, as whatever it predicts will be considered as true.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Because
+                                      some people do know where to dispose their trash, this alternative would give
+                                      no flexibility for them to sort by themselves and reduce the overall
+                                      contamination rate. Furthermore, this solution is very expensive, as it
+                                      requires a lot of energy to power the system, as well as a high cost of
+                                      materials and manufacturing.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Having
+                                      said that, a better alternative is to only indicate to the user where to
+                                      dispose the trash. Hence, we do not impose anything, but we educate people.
+                                      This could be done through LED light indicators, for example. A schema of the
+                                      information flow can be found in Figure 5 below:</span></p>
+
+                                      <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:0cm;text-align:center;text-indent:36.0pt;
+                                      line-height:150%;page-break-after:avoid'><img border=0 width=414 height=250
+                                      id="Picture 11" src="waste_classification_files/image005.jpg"></p>
+
+                                      <p class=MsoCaption align=center style='text-align:center'><span lang=EN
+                                      style='color:windowtext'>Figure </span><span
+                                      lang=EN style='color:windowtext'>5</span><span lang=EN style='color:windowtext'>
+                                      - Schema of information flow of solution</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+                                      we can see, the user experience starts by approximating the object to a
+                                      scanner, which will then take a picture. This picture is preprocessed,
+                                      compressed and sent to a cloud service via an API. This cloud service, which
+                                      will be hosting the computer vision algorithm, will take the image as input,
+                                      run the model and output the predicted category of the trash. This category is
+                                      then encoded and sent back to the smart bin processor, which will turn on the
+                                      respective LED light for that category. Finally, based on this LED indicator,
+                                      the user will make an informed decision of where to dispose the trash.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+                                      order for that system to work, all this flow must be done, ideally, in less
+                                      than one second, as the final user usually don't want to spend too much time
+                                      waiting to see where to throw their trash.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>I
+                                      developed a prototype of that system with a Raspberry Pi for a proof of
+                                      concept. All I needed was:</span></p>
+
+                                      <p class=MsoListParagraphCxSpFirst style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>Breadboard</span></p>
+
+                                      <p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>3 LED lights</span></p>
+
+                                      <p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>Wires</span></p>
+
+                                      <p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>1 resistor</span></p>
+
+                                      <p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>RaspberryPi with built-in Wi-Fi connection</span></p>
+
+                                      <p class=MsoListParagraphCxSpLast style='margin-top:12.0pt;margin-right:0cm;
+                                      margin-bottom:12.0pt;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+                                      line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      </span></span><span lang=EN style='font-size:12.0pt;line-height:150%;
+                                      font-family:"Times New Roman",serif'>Camera</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>With
+                                      that in hand, I built a circuit with the LED lights, wires and resistors in the
+                                      breadboard and connected to the Raspberry Pi through the GPIO header.</span></p>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Then,
+                                      I wrote a code in python to activate the scanner, preprocess the image, send to
+                                      the cloud, get the response and turn on the LED light accordingly. The final
+                                      result is shown in this quick demo:</span></p>
+
+                                      <iframe width="560" height="315" src="https://www.youtube.com/embed/TeIHLbVZyEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                      <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+                                      12.0pt;margin-left:0cm;text-align:justify;text-indent:36.0pt;line-height:150%'><span
+                                      lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>
+                                      Here, the red color means Metal/Glass, the yellow means Paper/Cardboard and the green means Plastic/Trash.
+                                      </span></p>
+
+                                      <p class=MsoNormal><span lang=EN style='font-size:12.0pt;line-height:115%;
+                                      font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
+                                      150%'><b><span lang=EN style='font-size:16.0pt;line-height:150%;font-family:
+                                      "Georgia",serif'>Final Remarks</span></b></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>In this article, I compared a couple
+                                      of machine learning algorithms on the task of waste image classification and
+                                      integrated the best model with a hardware component to create a smart bin
+                                      concept.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>According to the results, using
+                                      computer vision to help reducing the contamination rate in recycling seems very
+                                      promising and, in order to work, it must be applied in the beginning of the
+                                      chain.</span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>However, in order to scale the
+                                      solution, some additional steps must be followed. Although the final model
+                                      performed very well on the test set, I don't know how it will perform in real
+                                      life. Then, it would be useful to test the model with real-world images that we
+                                      collect with a camera installed in the bin, for example. I should also decide
+                                      if I focus on one object at a time or if I perform multiple object detection in
+                                      case someone throws more than one type of waste at the same time. </span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Regarding the classes, if we are to
+                                      apply the model in real-life, we need to adapt them to the local law. For
+                                      example, in California our classes would be Landfill, Compost, Cans &amp;
+                                      Bottles and Mixed Paper. </span></p>
+
+                                      <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+                                      36.0pt;line-height:150%'><span lang=EN style='font-size:12.0pt;line-height:
+                                      150%;font-family:"Times New Roman",serif'>Finally, we can replace accuracy by
+                                      average loss as our evaluation metric. For that, we need to estimate the loss
+                                      of incorrectly classifying our classes, which can be linked to the potential
+                                      revenue that could be made by correctly sorting the waste.</span></p>
+
+                                    </div>
                                  </div>
                               </div>
                            </div>
