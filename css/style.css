@@ -707,6 +707,9 @@ margin-left: 10px;}
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.carrefour {
     background: white;
     background-image: url("../images/carrefour.svg"); }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.nasa {
+    background: white;
+    background-image: url("../images/nasa.svg"); }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
