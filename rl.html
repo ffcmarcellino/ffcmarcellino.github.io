@@ -67,7 +67,7 @@
                                  <br><br>
                                  <p align="justify">In this project, I give a brief introduction on the Multi-armed Bandits problem, I experiment with multiple approaches to solve it and I compare the results. I also introduce the Contextual Bandits problem.</p>
                                  <p align="justify">The environment used to train the agents has 10 actions representing routes to go from work to home and it returns as reward the time spent in traffic in that route. The goal of the agents is to find the fastest route (in expectation).</p>
-                                 <p><i>Created at: April 10, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 10, 2023</i></p>
+                                 <p><i>Created on: April 10, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 10, 2023</i></p>
                                  <hr>
                               </div>
                               <div class="col-md-12">
@@ -79,7 +79,7 @@
                                  <br><br>
                                  <p align="justify">In this project, I introduce a few concepts that are the foundations to more advanced RL algorithms, such as an MDP, value functions and Bellman Equations. Then, I solve the maze problem using dynamic programming: Policy Iteration, Value Iteration and Generalized Policy Iteration.</p>
                                  <p align="justify">The environment used to train the agents was taken from this <a href="https://github.com/MattChanTK/gym-maze" target="_blank">github repository</a> and a few adaptations were made.</p>
-                                 <p><i>Created at: June 12, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: June 12, 2023</i></p>
+                                 <p><i>Created on: June 12, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: June 12, 2023</i></p>
                                  <hr>
                               </div>
                               <div class="col-md-12">
@@ -91,7 +91,7 @@
                                  <br><br>
                                  <p align="justify">In this project, I introduce Monte Carlo methods for estimating value functions, as well as different strategies of exploration of the state-action space. I also explain the concept of an after-state and how it is useful. Finally, I train an agent to learn how to play Tic Tac Toe against a random opponent and an advanced one.</p>
                                  <p align="justify">The Tic Tac Toe environment used to train the agents was built from scratch and has the options of a random or advanced opponent to play with.</p>
-                                 <p><i>Created at: August 14, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: August 14, 2023</i></p>
+                                 <p><i>Created on: August 14, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: August 14, 2023</i></p>
                                  <hr>
                               </div>
                               <div class="col-md-12">
@@ -103,7 +103,7 @@
                                  <br><br>
                                  <p align="justify">In this project, I extend the Monte Carlo algorithms to the off-policy setting and I introduce different methodologies, such as Ordinary and Weighted Importance Sampling, Discount-Aware Importance Sampling and Per-Decision Importance Sampling.</p>
                                  <p align="justify">The environment used to train the agents is a customized version of the <a href="https://minigrid.farama.org/environments/minigrid/">Mini-grid environment</a> from the Farama Foundation.</p>
-                                 <p><i>Created at: September 29, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: September 29, 2023</i></p>
+                                 <p><i>Created on: September 29, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: September 29, 2023</i></p>
                                  <hr>
                               </div>
                               <div class="col-md-12">
@@ -115,7 +115,19 @@
                                  <br><br>
                                  <p align="justify">In this project, I talk about Temporal Difference methods to learn an optimal policy. More specifically, I compare different algorithms of the class of TD(0) methods, such as Sarsa, Expected Sarsa, Q-Learning and Double Q-Learning.</p>
                                  <p align="justify">The environment used to train the agents is a customized version of the <a href="https://minigrid.farama.org/environments/minigrid/">Mini-grid environment</a> from the Farama Foundation.</p>
-                                 <p><i>Created at: March 12, 2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: March 12, 2024</i></p>
+                                 <p><i>Created on: March 12, 2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: March 12, 2024</i></p>
+                                 <hr>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="about-desc">
+                                    <a href="https://medium.com/p/4c6b314f21cc" target="_blank"><h3>n-Step TD Learning</h3></a>
+                                    <a href="https://medium.com/p/4c6b314f21cc" target="_blank"><img src="images/taxi.png" style="border:3px solid black;width:449px;height:298px"></img></a>
+                                 </div>
+                                 <a href="https://github.com/ffcmarcellino/applied-reinforcement-learning/tree/main/projects/taxi_nstep">Code</a>&nbsp;&nbsp;<a href="https://medium.com/p/4c6b314f21cc">Article</a>
+                                 <br><br>
+                                 <p align="justify">In this project, I unify Monte Carlo and TD Learning by introducing n-Step TD Learning.</p>
+                                 <p align="justify">I compare this algorithm on multiple values of n, both on and off-policy, using the <a href="https://gymnasium.farama.org/environments/toy_text/taxi">Taxi environment</a> from the Farama Foundation to train the agents.</p>
+                                 <p><i>Created on: August 29, 2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: August 29, 2024</i></p>
                                  <hr>
                               </div>
                               <div class="col-md-12">
@@ -128,7 +140,7 @@
                                  <p align="justify">The goal of this challenge is to drive the car up the mountain on the right and pass the yellow flag. However, the car's engine is not strong enough to reach the top of the hill by itself. Therefore, the only way to succeed is to drive back and forth to build up momentum.</p>
                                  <p align="justify">In this project, I applied reinforcement learning algorithms to find an optimal policy for the car to control its engine power in order to reach the yellow flag the fastest way possible. I start by using tabular Q-learning with state aggregation, followed by linear function approximation methods.</p>
                                  <p align="justify">The environment with the mountain and car can be found at the <a href="https://gymnasium.farama.org/environments/classic_control/mountain_car/" target="_blank">Gymnasium website</a>.</p>
-                                 <p><i>Created at: April 11, 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 11, 2020</i></p>
+                                 <p><i>Created on: April 11, 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 11, 2020</i></p>
                               </div>
                               <!-- <div class="col-md-12">
                                  <div class="about-desc">
@@ -140,7 +152,7 @@
                                  <p align="justify">Vehicle congestion is one the biggest problems in large cities and metropolitan areas. The opportunity cost of being stuck in traffic has a large impact in the economy, in addition to problems such as air pollution and road accidents led by stress.</p>
                                  <p align="justify">One of the causes of traffic jams is poor traffic light timing and synchronization. Current systems usually have fixed policies that become outdated and don't adapt to changes in the environment.</p>
                                  <p align="justify">In this project, I use reinforcement learning techniques (Q-learning with linear function approximation) to find near-optimal policies to control traffic lights in small networks of 2 and 3 intersections. The goal is to minimize the length of the queues of vehicles stopped in a red light. The environment dynamics is ruled by OTM, an open-source traffic model developed at UC Berkeley.</p>
-                                 <p><i>Created at: April 21, 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 21, 2020</i></p>
+                                 <p><i>Created on: April 21, 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: April 21, 2020</i></p>
                               </div> -->
                               <!-- <div class="col-md-12">
                                  <div class="about-desc">
